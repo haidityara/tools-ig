@@ -6,10 +6,10 @@
 <br/>
 
 # For PC/Laptop ONLY:
-	* Download GIT for Windows	(https://git-scm.com/download/) *Choose WIN & 32bit/64bit
+	* Download GIT for Windows		(https://git-scm.com/download/) *Choose WIN & 32bit/64bit
 	* Download NodeJS 			(https://nodejs.org/en/download/) *Choose .msi & 32bit/64bit
 	* INSTALL GIT for Windows & NodeJS
-	* Download File ig-syntax on Github (https://github.com/teamsyntaxid/tools-ig.git)
+	* Download File ig-syntax on Github 	(https://github.com/teamsyntaxid/tools-ig.git)
 	* Extract File ig-syntax and enter the folder
 	* Right Click on Mouse, Then Select "Git Bash Here" (Make sure you are in the ig-syntax folder!!!)
 	* Then type: unzip node_modules.zip
@@ -29,13 +29,13 @@
 <br/>
 
 # INFORMATION:
-	* dellallphoto		"Delete All Post IG"			(WORK & TESTED)
+	* dellallphoto			"MASS DELETE PHOTO/POST IG"		(WORK & TESTED)
 	* fah				"SELECTED WITH HASTAG IG"		(WORK & TESTED)
 	* fftauto			"SELECTED WITH TARGET IG"		(WORK & TESTED)
 	* flaauto			"SELECTED WITH LOCATION IG"		(WORK & TESTED)
 	* flmauto			"SELECTED WITH MEDIA IG"		(WORK & TESTED)
 	* unfollall			"UNFOLOW ALL FOLLOWING IG"		(WORK & TESTED)
-	* unfollnotfollback	"UNFOLLOW NOT FOLLOWBACK IG"	(WORK & TESTED)
+	* unfollnotfollback		"UNFOLLOW NOT FOLLOWBACK IG"		(WORK & TESTED)
 	* botlike			"LIKE/LOVE TIMELINE IG"			(WORK & TESTED)
 	* botlike2			"LIKE/LOVE TIMELINE IG"			(WORK & TESTED)
 <br/>
@@ -48,8 +48,8 @@
 
 # UPDATE
 	1. Fix Error No Detect Followers Target
-    2. + Added Target from 5 to 10/DELAY
-    3. + Improvements In Display Program
+    	2. + Added Target from 5 to 10/DELAY
+    	3. + Improvements In Display Program
 <br/>
 
 # SPECIAL THANKS TO:
