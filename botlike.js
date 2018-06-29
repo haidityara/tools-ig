@@ -1,5 +1,11 @@
 'use strict'
 
+/** BOT LIKE **/
+/** CODE BY CCOCOT | CCOCOT.CO **/
+/** ccocot@bc0de.net **/
+/** BC0DE.NET - NAONLAH.NET - WingKocoli **/
+/** NOTE : RUN WITH PM2 **/
+
 const Client = require('instagram-private-api').V1;
 const delay = require('delay');
 const chalk = require('chalk');
@@ -7,35 +13,35 @@ const _ = require('lodash');
 const inquirer = require('inquirer');
 
 const User = [
-{
-    type:'input',
-    name:'username',
-    message:'[>] Insert Username:',
-    validate: function(value){
-      if(!value) return 'Can\'t Empty';
-      return true;
-  }
-},
-{
-    type:'password',
-    name:'password',
-    message:'[>] Insert Password:',
-    mask:'*',
-    validate: function(value){
-      if(!value) return 'Can\'t Empty';
-      return true;
-  }
-},
-{
-    type:'input',
-    name:'sleep',
-    message:'[>] Insert Sleep (In MiliSeconds):',
-    validate: function(value){
-        value = value.match(/[0-9]/);
-        if (value) return true;
-        return 'Delay is number';
+    {
+        type:'input',
+        name:'username',
+        message:'[>] Insert Username:',
+	validate: function(value){
+		if(!value) return 'Can\'t Empty';
+		return true;
+	}
+    },
+    {
+        type:'password',
+        name:'password',
+        message:'[>] Insert Password:',
+        mask:'*',
+	validate: function(value){
+		if(!value) return 'Can\'t Empty';
+		return true;
+	}
+    },
+    {
+        type:'input',
+        name:'sleep',
+        message:'[>] Insert Sleep (MiliSeconds):',
+        validate: function(value){
+            value = value.match(/[0-9]/);
+            if (value) return true;
+            return 'Delay is number';
+        }
     }
-}
 ]
 
 const Login = async function(User){
@@ -55,16 +61,16 @@ const Login = async function(User){
 
 }
 
-const Like = async function(session,id){
+const Like = async function(session,media){
     try {
         if (media.params.hasLiked) {
            return chalk`{bold.blue Already Liked}`;
-       }
-       await Client.Like.create(session, media.id);
-       return chalk`{bold.green Liked}`;
-   } catch (err) {
-    return chalk`{bold.red Failed}`;
-}
+        }
+        await Client.Like.create(session, media.id);
+        return chalk`{bold.green Liked}`;
+    } catch (err) {
+        return chalk`{bold.red Failed}`;
+    }
 }
 
 const Excute = async function(User, sleep){
@@ -81,7 +87,7 @@ const Excute = async function(User, sleep){
             for (var i = 0; i < media.length; i++) {
                 await Promise.all(media[i].map(async (media) => {
                     const doLike = await Like(doLogin.session, media);
-                    console.log(chalk`{bold.green [U] }${media.params.user.username} [{cyan ${media.id}}] => ${doLike}`);
+                    console.log(chalk`[{bold.green U}] ${media.params.user.username} [{cyan ${media.id}}] => ${doLike}`);
                 }))
                 await console.log(chalk`{yellow \n [#][>] Delay For ${sleep} MiliSeconds [<][#] \n}`);
                 await delay(sleep);
@@ -93,7 +99,7 @@ const Excute = async function(User, sleep){
 }
 
 console.log(chalk`
-  {bold.cyan
+ {bold.cyan
   —————————————————— [INFORMATION] ————————————————————
 
   [?] {bold.green BOTLIKEv1 | Like/Love TL IG *SET SLEEP!}
@@ -107,9 +113,9 @@ console.log(chalk`
       `);
 
 inquirer.prompt(User)
-.then(answers => {
-    Excute({
-        username:answers.username,
-        password:answers.password
-    },answers.sleep);
-})
+    .then(answers => {
+        Excute({
+            username:answers.username,
+            password:answers.password
+        },answers.sleep);
+    })
