@@ -48,7 +48,7 @@
 
 # UPDATE
 	1. Fix Error No Detect Followers Target
-    	2. + Added Target from 5 to 10/DELAY
+	2. + Added Target from 5 to 10/DELAY
     	3. + Improvements In Display Program
 <br/>
 
