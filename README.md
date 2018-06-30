@@ -23,7 +23,7 @@
 	* pkg install git
 	* pkg install nodejs
 	* git clone https://github.com/teamsyntaxid/tools-ig.git
-	* cd ig-syntax
+	* cd tools-ig
 	* unzip node_modules.zip
 	* node namefile.js
 <br/>
